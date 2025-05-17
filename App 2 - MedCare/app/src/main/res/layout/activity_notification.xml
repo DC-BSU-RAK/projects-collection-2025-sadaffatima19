@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9BDAE8"
+    android:padding="16dp"
+    tools:context=".NotificationActivity">
+
+    <!-- Logo (Top Left) -->
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/logo_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- User Icon (Top Right) -->
+
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:contentDescription="Profile"
+        android:src="@drawable/ic_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- White Divider Line -->
+
+    <View
+        android:id="@+id/topDivider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Notifications Heading -->
+    <TextView
+        android:id="@+id/notificationsHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notifications"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/topDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- White Divider Line below heading -->
+    <View
+        android:id="@+id/midDivider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/notificationsHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Medicine Info Box -->
+    <TextView
+        android:id="@+id/medicineInfoBox"
+        android:layout_width="358dp"
+        android:layout_height="333dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_box"
+        android:padding="16dp"
+        android:text="Medicine Information\n\nApixaban is a type of medicine known as an anticoagulant. It makes your blood flow through your veins more easily, which means your blood is less likely to make blood clots. It's used to treat people who have had a health problem caused by a blood clot, such as: a blood clot in the leg (deep vein thrombosis, or DVT)\n\nPyridoxine is the 4-methanol form of vitamin B6, an important water-soluble vitamin that is naturally present in many foods. As its classification as a vitamin implies, Vitamin B6 (and pyridoxine) are essential nutrients required for normal functioning of many biological systems within the body."
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/midDivider" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Settings Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iconSettings"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_settings" />
+
+            <View
+                android:id="@+id/underlineSettings"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!-- Pillbox Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iconPillbox"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_pillbox" />
+
+            <View
+                android:id="@+id/underlinePillbox"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!-- Home Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iconHome"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_home" />
+
+            <View
+                android:id="@+id/underlineHome"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!-- Notifications Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iconNotifications"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_notifications" />
+
+            <View
+                android:id="@+id/underlineNotifications"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <!-- User Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iconUser"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_user" />
+
+            <View
+                android:id="@+id/underlineUser"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

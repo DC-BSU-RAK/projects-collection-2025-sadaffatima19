@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white"
+    >
+
+    <!-- Dialog Title -->
+    <TextView
+        android:id="@+id/instructionsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How to Use MedCare"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Scrollable Instructions Text -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:overScrollMode="ifContentScrolls">
+
+        <TextView
+            android:id="@+id/instructionsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Add your medications and schedules.\n\n2. Set reminders for each medication.\n\n3. Track your health and medication history.\n\n4. Get alerts for drug interactions.\n\n5. Stay on top of your health with MedCare."
+            android:textSize="16sp"
+            android:textColor="#000000" />
+    </ScrollView>
+
+    <!-- Close Button -->
+    <Button
+        android:id="@+id/closeInstructionsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"/>
+</LinearLayout>

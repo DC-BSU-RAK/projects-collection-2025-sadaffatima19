@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#B8B7E1">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo_1"
+        android:contentDescription="App Logo"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Welcome Title -->
+    <TextView
+        android:id="@+id/welcomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to MedCare"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Description Text -->
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MedCare is your reliable solution for managing medication schedules. Our app offers personalized reminders, health tracking, and drug interaction alerts to ensure you never miss a dose. Simplify your medication management and take control of your health with MedCare."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:padding="16dp"
+        android:gravity="center" />
+
+    <!-- Subheading Text -->
+    <TextView
+        android:id="@+id/setupText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's get your medication management set up in just a few easy steps."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="30dp"
+        android:gravity="center" />
+
+    <!-- Get Started Button -->
+    <!-- Buttons container: horizontal layout for two buttons side-by-side -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp">
+
+        <Button
+            android:id="@+id/getStartedBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Started"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/instructionsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instructions"
+            android:textSize="18sp"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#9BDAE8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_above="@+id/bottomNav">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Top Bar -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/logoHome"
+                    android:layout_width="227dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/logo_home" />
+            </RelativeLayout>
+
+            <!-- Heading -->
+            <TextView
+                android:id="@+id/settingsHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:text="Settings"
+                android:textColor="#000000"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <!-- Search Bar -->
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Search settings..."
+                android:background="@drawable/rounded_background_search"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="8dp"
+                android:inputType="text" />
+
+            <!-- Settings Items -->
+            <TextView
+                android:id="@+id/itemProfileSettings"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/rounded_background"
+                android:drawableLeft="@drawable/ic_name"
+                android:drawableRight="@drawable/ic_more"
+                android:drawablePadding="16dp"
+                android:padding="12dp"
+                android:gravity="start|center_vertical"
+                android:text="Profile Settings"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/itemNotificationPrefs"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_background"
+                android:drawableLeft="@drawable/ic_notifications"
+                android:drawableRight="@drawable/ic_more"
+                android:drawablePadding="16dp"
+                android:padding="12dp"
+                android:gravity="start|center_vertical"
+                android:text="Notification Preferences"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_background"
+                android:drawableLeft="@drawable/ic_language"
+                android:drawableRight="@drawable/ic_more"
+                android:drawablePadding="16dp"
+                android:padding="12dp"
+                android:gravity="start|center_vertical"
+                android:text="Language &amp; Region"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/itemEmergencyInfo"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_background"
+                android:drawableLeft="@drawable/ic_emergency"
+                android:drawableRight="@drawable/ic_more"
+                android:drawablePadding="16dp"
+                android:padding="12dp"
+                android:gravity="start|center_vertical"
+                android:text="Emergency Info"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_background"
+                android:drawableLeft="@drawable/ic_stack"
+                android:drawableRight="@drawable/ic_more"
+                android:drawablePadding="16dp"
+                android:padding="12dp"
+                android:gravity="start|center_vertical"
+                android:text="Data Management"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_background"
+                android:drawableLeft="@drawable/ic_password"
+                android:drawableRight="@drawable/ic_more"
+                android:drawablePadding="16dp"
+                android:padding="12dp"
+                android:gravity="start|center_vertical"
+                android:text="Passwords"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Divider Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/bottomNav"
+        android:layout_marginBottom="4dp"
+        android:background="#FFFFFF" />
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Settings Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iconSettings"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_settings" />
+
+            <View
+                android:id="@+id/underlineSettings"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <!-- Pillbox Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iconPillbox"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_pillbox" />
+
+            <View
+                android:id="@+id/underlinePillbox"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!-- Home Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iconHome"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_home" />
+
+            <View
+                android:id="@+id/underlineHome"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!-- Notifications Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iconNotifications"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_notifications" />
+
+            <View
+                android:id="@+id/underlineNotifications"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!-- User Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iconUser"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_user" />
+
+            <View
+                android:id="@+id/underlineUser"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

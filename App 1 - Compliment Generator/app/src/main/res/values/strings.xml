@@ -1,0 +1,18 @@
+<resources>
+
+    <string-array name="moods">
+        <item>Stressed</item>
+        <item>Excited</item>
+        <item>Tired</item>
+        <item>Confident</item>
+    </string-array>
+
+    <string-array name="colors">
+        <item>Pink</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Green</item>
+    </string-array>
+
+    <string name="app_name">Compliment Generator</string>
+</resources>
